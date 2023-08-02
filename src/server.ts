@@ -6,7 +6,7 @@ import { routes } from "./routes";
 const app = express();
 
 // CORS config
-const allowedOrigins = ["http://localhost:3001"];
+const allowedOrigins = ["http://localhost:3000"];
 
 const options: cors.CorsOptions = {
     origin: allowedOrigins,
@@ -18,6 +18,6 @@ app.use(cors(options));
 app.use(express.json());
 app.use(routes);
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log("Server is Running!");
 });
